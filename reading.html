@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine: Different Strokes</title>
+    <style>
+        :root { --bg-img: url('https://res.cloudinary.com/dslu7arqa/image/upload/v1778266054/02_background_wirihi.jpg'); }
+        body { 
+            margin: 0; font-family: 'Georgia', serif; height: 100dvh; display: flex; align-items: center; justify-content: center; 
+            background-image: var(--bg-img); background-size: cover; background-position: center;
+        }
+        body::before { content: ""; position: absolute; inset: 0; background: rgba(255,255,255,0.9); z-index: -1; }
+
+        #mag-container { 
+            width: 90%; max-width: 850px; height: 85%; background: white; border-radius: 15px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1); position: relative; overflow: hidden; padding: 40px;
+        }
+
+        .slide { display: none; height: 100%; flex-direction: column; overflow-y: auto; padding-right: 15px; }
+        .slide.active { display: flex; animation: fade 0.6s; }
+        
+        h1 { font-size: 2.5rem; color: #2c3e50; border-bottom: 3px solid #e74c3c; display: inline-block; margin-bottom: 20px; }
+        p { font-size: 1.2rem; line-height: 1.6; color: #333; margin-bottom: 15px; }
+        
+        .img-box { width: 100%; text-align: center; margin: 20px 0; }
+        .img-box img { max-width: 100%; border-radius: 15px; box-shadow: 5px 5px 15px rgba(0,0,0,0.2); }
+        .circle { border-radius: 50% !important; width: 220px; height: 220px; object-fit: cover; }
+
+        .controls { margin-top: auto; padding-top: 20px; display: flex; justify-content: space-between; }
+        button { padding: 12px 25px; cursor: pointer; background: #2c3e50; color: white; border: none; border-radius: 8px; font-weight: bold; }
+        
+        @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+<div id="mag-container">
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <h1>Different Strokes</h1>
+        <div class="img-box"><img src="https://res.cloudinary.com/dslu7arqa/image/upload/v1778266053/01_myp0yq.png" class="circle"></div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h1>Introduction</h1>
+        <p>A look at the differences in character between the British and Americans.</p>
+        <p>You will see, there are many similarities, but also many differences.</p>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h1>Meeting Americans and Brits</h1>
+        <p><b>In general, Americans are very friendly.</b> When they meet you, they’ll give you a loud “hello”, a firm handshake, a wide smile, and good eye contact. They’ll immediately start using your first name (even if you’re fifty years older than them), and they’ll open themselves up to you with information on their family, education and personal life.</p>
+        <div class="img-box"><img src="https://res.cloudinary.com/dslu7arqa/image/upload/v1778266053/shaking_hands_mircdq.jpg"></div>
+        <p>You’ll immediately feel like their friend. Many Americans have casual relationships that are loosely termed as “friends at work” or “friends at school” and so on.</p>
+        <p>The British, on the other hand, may come across as colder, more distant and less friendly. When they meet you, they’ll probably make some sarcastic comment about the weather, boast about how much they drank the night before, or ask you where you’re from and what you’re doing there.</p>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h1>Time</h1>
+        <div class="img-box"><img src="https://res.cloudinary.com/dslu7arqa/image/upload/v1778266053/time_tsn4rn.jpg" class="circle"></div>
+        <p>“Doing” is very important to Americans; and “wasting time” is viewed negatively. For business and most meetings, punctuality is very important. Many Americans organise their activities according to a schedule. As a result, they always seem to be running around, hurrying to get to their next appointment.</p>
+        <p>The British are similar, and have a great obsession for punctuality, which they value far above human kindness and charity. Strangely though, British trains are some of the least punctual in the world.</p>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h1>Image</h1>
+        <p>Most Americans are obsessed with image. The cultural message for both men and women is, "Look 20 years younger". Old Americans try to stop the ageing process by dyeing their hair, wearing blue jeans, and having their faces lifted and their tummies tucked.</p>
+        <div class="img-box"><img src="https://res.cloudinary.com/dslu7arqa/image/upload/v1778266053/makeup_uetx1n.jpg"></div>
+        <p>The definitive remark on ageing was made by Ivana Trump, who said, "I'll always look 35, but it's going to cost Donald [her husband] a lot of money."</p>
+        <p>The British have started copying this American trend, although not to the same extreme. They are generally worried about their personal image, but usually can't be bothered to do anything about it. Generally, in Britain, it is considered vulgar to try too hard - you have to keep it a secret.</p>
+        <div class="img-box"><img src="https://res.cloudinary.com/dslu7arqa/image/upload/v1778266338/sterotype_p76aqh.jpg" class="circle"></div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h1>Character</h1>
+        <p>Americans admire strong, self-reliant, individual people. American heroes include outlaws such as Jesse James, successful entrepreneurs like Sam Walton, and tough guys like Humphrey Bogart and John Wayne. They hate being dependent on other people. Other cultures may view this as "selfishness".</p>
+        <div class="img-box"><img src="https://res.cloudinary.com/dslu7arqa/image/upload/v1778266516/comedy_bcdgbm.jpg"></div>
+        <p>The British are similar in the sense that they like to be independent, but this is mainly as a way of avoiding confrontation. British heroes include James Bond, Mr Bean and Benny Hill.</p>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide">
+        <h1>Health and Beauty</h1>
+        <p>Americans like to feel and look good. They spend millions on drugs, books, and psychotherapy. Helpful books include <i>I’m OK; You’re OK; Feeling Good; and The Seven Habits of Highly Effective People.</i> In general, Americans have a positive outlook on life, and a go-getting, problem-solving attitude.</p>
+        <div class="img-box"><img src="https://res.cloudinary.com/dslu7arqa/image/upload/v1778266442/healthy_ai13yw.jpg"></div>
+        <p>The British are starting to be more like the Americans in this respect; although they aren’t so addicted to all the pills and medicines. When the Brits get depressed, they prefer to have a cup of tea, or go to the pub.</p>
+    </div>
+
+    <div class="controls">
+        <button onclick="changeSlide(-1)">Anterior</button>
+        <button onclick="changeSlide(1)">Siguiente</button>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    function changeSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+</script>
+
+</body>
+</html>
